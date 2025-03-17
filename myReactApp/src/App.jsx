@@ -1,34 +1,15 @@
-import './App.css'
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-const Card =({title})=>{
-
-  const [count, setCount] = useState(0)
-  const [hasLiked, setHasLiked] = useState(false);
-
-  useEffect(()=>{
-    console.log(`${title} has been liked: ${hasLiked}`)
-  },[hasLiked])
-  
-
+const App = () => {
   return(
-    <div className='card' onClick={() => setCount(count+1)}>
-      <h2>{title}</h2>
-      <h2>{count ? count : null }</h2>
-      <button onClick={() => setHasLiked(!hasLiked)}>
-        {hasLiked ? 'Liked': 'Like'}</button>
+    <div className='pattern'>
+      <div className='wrapper'>
+        <header>
+          <img src="../public/hero-img.png" alt="Hero Banner" />
+          <h1> <span className='text-gradient'>Find Movies</span> You'll Love</h1>
+          </header>
+      </div>
     </div>
-  )
-}
-
-const App = () =>{
-  
-  return (
-  <div className='card-container'>
-    <Card title='The Lion King'/>
-    <Card title='Puss In Boots'/>
-    <Card title='Turning Red'/>
-  </div>
   )
 }
 
