@@ -24,7 +24,7 @@
   body {
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
-    background: #030014 url(../public/BG.png) no-repeat;
+    background: #030014 url(/BG.png) no-repeat;
     background-size: cover;
   }
 
